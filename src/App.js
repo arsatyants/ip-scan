@@ -1,6 +1,7 @@
 import './App.css';
 import {useState,useEffect} from 'react'
 import axios from 'axios'
+import {render} from "react-dom";
 
 function App() {
   //creating IP state
@@ -15,7 +16,7 @@ function App() {
 
   useEffect( () => {
     //passing getData method to the lifecycle method
-    getData()
+    getData().then(r => console.log(r))
 
   }, [])
 
